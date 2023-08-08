@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageViewRating"
+        android:layout_width="93dp"
+        android:layout_height="73dp"
+        android:contentDescription="@null"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        app:srcCompat="@drawable/rating_g" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingTop="10dp"
+        android:text="Title"
+        android:textAppearance="@android:style/TextAppearance.Large" />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre"
+        android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="Year"
+        android:textAppearance="@android:style/TextAppearance.Medium"/>
+
+</LinearLayout>
