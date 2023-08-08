@@ -7,10 +7,19 @@
     android:orientation="vertical"
     tools:context=".editmovie">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/monofett"
+        android:gravity="center_horizontal"
+        android:text="- EDIT MOVIE -"
+        android:textSize="50dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="15dp"
         android:orientation="horizontal">
 
         <TextView
@@ -33,13 +42,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
 
         <TextView
             android:id="@+id/tvMovietitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
             android:textSize="20dp"
             android:text="Movie Title:" />
 
@@ -50,8 +62,8 @@
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:hint="enter movie title " />
 
@@ -59,8 +71,8 @@
             android:id="@+id/tvGenre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:textSize="20dp"
             android:text="Genre: " />
@@ -69,20 +81,21 @@
             android:id="@+id/etgenre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
             android:ems="10"
             android:inputType="text"
             android:minHeight="48dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginBottom="5dp"
+            tools:ignore="SpeakableTextPresentCheck" />"
             android:hint="enter genre " />
 
         <TextView
             android:id="@+id/tvYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:textSize="20dp"
             android:text="Year: " />
@@ -94,8 +107,8 @@
             android:ems="10"
             android:inputType="number"
             android:minHeight="48dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:hint="enter year of release" />
 
@@ -103,8 +116,8 @@
             android:id="@+id/tvRating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:textSize="20dp"
             android:text="Rating" />
@@ -113,8 +126,8 @@
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginBottom="5dp"
             android:entries="@array/spinner"
             android:minHeight="48dp" />
@@ -130,7 +143,7 @@
             android:id="@+id/btnupdate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_margin="15dp"
             android:layout_weight="1"
             android:text="UPDATE" />
 
@@ -138,8 +151,8 @@
             android:id="@+id/btndelete"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
             android:layout_marginBottom="5dp"
             android:layout_weight="1"
             android:text="DELETE" />
@@ -154,9 +167,9 @@
             android:id="@+id/btncancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
             android:text="CANCEL" />
     </LinearLayout>
 </LinearLayout>

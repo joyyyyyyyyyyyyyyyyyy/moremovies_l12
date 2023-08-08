@@ -11,15 +11,15 @@
         android:id="@+id/btnShowPG13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="15dp"
         android:text="SHOW ALL PG-13 MOVIES" />
 
     <Button
         android:id="@+id/btnback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
         android:text="BACK" />
 
@@ -27,5 +27,5 @@
         android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="5dp"/>
+        android:layout_margin="15dp"/>
 </LinearLayout>
