@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/img_2"
+    android:backgroundTint="#BE494343"
+    android:backgroundTintMode="src_over"
     tools:context=".showmovies">
 
     <Button
@@ -12,6 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
+        android:backgroundTint="@color/lightgreen"
+        android:textColor="@color/green"
+        android:fontFamily="@font/black_ops_one"
         android:text="SHOW ALL PG-13 MOVIES" />
 
     <Button
@@ -21,6 +27,9 @@
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
+        android:textColor="@color/darkblue"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/black_ops_one"
         android:text="BACK" />
 
     <ListView

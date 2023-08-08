@@ -108,7 +108,7 @@ public class editmovie extends AppCompatActivity {
         btndelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder myBuilder = new AlertDialog.Builder(editmovie.this);
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(editmovie.this, R.style.AlertDialog);
                 myBuilder.setTitle("Warning!");
                 myBuilder.setMessage("Are you sure you want to delete the movie:  " + data.getTitle()+"?");
                 myBuilder.setCancelable(true);
@@ -148,7 +148,7 @@ public class editmovie extends AppCompatActivity {
         btncancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder myBuilder = new AlertDialog.Builder(editmovie.this);
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(editmovie.this, R.style.AlertDialog);
                 myBuilder.setTitle("Warning!");
                 myBuilder.setMessage("Are you sure you want to discard the changes?");
                 myBuilder.setCancelable(true);

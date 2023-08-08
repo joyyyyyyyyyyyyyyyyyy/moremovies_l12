@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                AlertDialog.Builder myBuilder = new AlertDialog.Builder(MainActivity.this);
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(MainActivity.this, R.style.AlertDialog);
                 myBuilder.setTitle("Confirm Insert");
                 myBuilder.setMessage(String.format("You are about to insert a new movie: \n\n Movie Title: %s \n Movie Genre: %s \n Release Year: %d \n Rating: %s \n", title, genre, year, rating));
                 myBuilder.setCancelable(true);

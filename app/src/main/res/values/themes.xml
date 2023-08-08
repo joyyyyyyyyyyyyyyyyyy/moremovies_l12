@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Moremovies_l12" parent="Base.Theme.Moremovies_l12" />
+
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">#FFFFFFFF</item>
+        <item name="colorPrimaryDark">#FF000000</item>
+    </style>
+
 </resources>

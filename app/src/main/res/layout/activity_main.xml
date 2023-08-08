@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/img_2"
+    android:backgroundTint="#BE494343"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity" >
 
     <TextView
@@ -14,6 +17,7 @@
         android:fontFamily="@font/monofett"
         android:gravity="center_horizontal"
         android:text="- MOVIES LIST -"
+        android:textColor="@color/white"
         android:textSize="45dp" />
 
     <TextView
@@ -24,6 +28,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
         android:textSize="20dp"
+        android:fontFamily="@font/black_ops_one"
+        android:textColor="@color/white"
         android:text="Movie Title:" />
 
     <EditText
@@ -46,6 +52,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
         android:textSize="20dp"
+        android:fontFamily="@font/black_ops_one"
+        android:textColor="@color/white"
         android:text="Genre: " />
 
     <EditText
@@ -67,6 +75,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
+        android:fontFamily="@font/black_ops_one"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:text="Year: " />
 
@@ -90,6 +100,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="5dp"
         android:textSize="20dp"
+        android:fontFamily="@font/black_ops_one"
+        android:textColor="@color/white"
         android:text="Rating:" />
 
     <Spinner
@@ -113,6 +125,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_weight="1"
+            android:fontFamily="@font/black_ops_one"
+            android:textColor="@color/darkblue"
+            android:backgroundTint="@color/blue"
             android:text="INSERT" />
 
         <Button
@@ -123,6 +138,9 @@
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
             android:layout_weight="1"
+            android:textColor="@color/darkblue"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/black_ops_one"
             android:text="SHOW LIST" />
     </LinearLayout>
 </LinearLayout>
