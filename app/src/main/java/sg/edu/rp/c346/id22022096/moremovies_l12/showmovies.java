@@ -68,6 +68,7 @@ public class showmovies extends AppCompatActivity {
 
                 Intent intent = new Intent(showmovies.this, editmovie.class);
                 intent.putExtra("data", data);
+                intent.putExtra("rating", data.getRating());
                 startActivity(intent);
             }
         });

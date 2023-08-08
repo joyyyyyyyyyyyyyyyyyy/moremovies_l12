@@ -106,15 +106,22 @@ public class editmovie extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder myBuilder = new AlertDialog.Builder(editmovie.this);
                 myBuilder.setTitle("Warning!");
-                myBuilder.setMessage("Are you sure you want to delete the movie " + data.getTitle()+"?");
+                myBuilder.setMessage("Are you sure you want to delete the movie:  " + data.getTitle()+"?");
                 myBuilder.setCancelable(true);
 
                 myBuilder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        DBHelper dbh = new DBHelper(editmovie.this);
-                        dbh.deleteMovie(data.getId());
+                        DBHelper db = new DBHelper(editmovie.this);
+                        int result = db.deleteMovie(data.getId());
+                        if (result>0){
+                        Toast.makeText(editmovie.this, "movie has been deleted", Toast.LENGTH_SHORT).show();
+                        Intent i1 = new Intent();
+                        setResult(RESULT_OK);
                         finish();
+                        } else {
+                        Toast.makeText(editmovie.this, "failed to delete movie", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
                 myBuilder.setNeutralButton("Cancel", null);

@@ -1,7 +1,9 @@
 package sg.edu.rp.c346.id22022096.moremovies_l12;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -88,16 +90,42 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                long result = dbh.insertMovie(title, genre, year, rating);
+                AlertDialog.Builder myBuilder = new AlertDialog.Builder(MainActivity.this);
+                myBuilder.setTitle("Confirm Insert");
+                myBuilder.setMessage(String.format("You are about to insert a new movie: \n\n Movie Title: %s \n Movie Genre: %s \n Release Year: %d \n Rating: %s \n", title, genre, year, rating));
+                myBuilder.setCancelable(true);
 
-                if (result != -1) {
-                    Toast.makeText(MainActivity.this, "movie successfully inserted", Toast.LENGTH_LONG).show();
-                    etmovietitle.setText("");
-                    etgenre.setText("");
-                    etyear.setText("");
-                } else {
-                    Toast.makeText(MainActivity.this, "insertion failed", Toast.LENGTH_LONG).show();
-                }
+                myBuilder.setPositiveButton("Insert", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //DBHelper dbh = new DBHelper(MainActivity.this);
+                        long result = dbh.insertMovie(title, genre, year, rating);
+
+                        if (result != -1) {
+                            Toast.makeText(MainActivity.this, "movie successfully inserted", Toast.LENGTH_LONG).show();
+                            etmovietitle.setText("");
+                            etgenre.setText("");
+                            etyear.setText("");
+                            } else {
+                            Toast.makeText(MainActivity.this, "insertion failed", Toast.LENGTH_LONG).show();
+                            }
+                    }
+                });
+
+                myBuilder.setNeutralButton("Cancel", null);
+                AlertDialog myDialog = myBuilder.create();
+                myDialog.show();
+
+                //long result = dbh.insertMovie(title, genre, year, rating);
+
+               // if (result != -1) {
+                    //Toast.makeText(MainActivity.this, "movie successfully inserted", Toast.LENGTH_LONG).show();
+                    //etmovietitle.setText("");
+                    //etgenre.setText("");
+                    //etyear.setText("");
+                //} else {
+                    //Toast.makeText(MainActivity.this, "insertion failed", Toast.LENGTH_LONG).show();
+                //}
             }
         });
 
