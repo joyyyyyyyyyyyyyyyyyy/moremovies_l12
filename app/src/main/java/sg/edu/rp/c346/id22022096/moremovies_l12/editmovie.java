@@ -48,6 +48,10 @@ public class editmovie extends AppCompatActivity {
         etmovietitle.setText(data.getTitle());
         etgenre.setText(data.getGenre());
         etyear.setText(String.valueOf(data.getYear()));
+        rating = data.getRating();
+
+        int spinnerPosition = getSpinnerPositionByRating(rating);
+        spinner.setSelection(spinnerPosition);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -163,5 +167,24 @@ public class editmovie extends AppCompatActivity {
             }
         });
 
+    }
+
+    private int getSpinnerPositionByRating(String rating) {
+        switch (rating) {
+            case "G":
+                return 0;
+            case "PG":
+                return 1;
+            case "PG13":
+                return 2;
+            case "NC16":
+                return 3;
+            case "M18":
+                return 4;
+            case "R21":
+                return 5;
+            default:
+                return 0; // Default to position 0 (or adjust as needed)
+        }
     }
 }
